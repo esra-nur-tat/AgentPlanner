@@ -27,9 +27,9 @@ No files are written to disk unless execution is explicitly enabled.
 
 ### Input
 
-```text
-Create a CLI tool that orchestrates planning, review, and execution steps for software projects
-Output (Plan)
+Create a CLI tool that orchestrates planning, review, and execution steps for software projects 
+### Output (Plan)
+''' text
 json
 Copy code
 {
@@ -61,7 +61,7 @@ Copy code
     "requirements.md"
   ],
   "status": "draft"
-}
+}'''
 ## Dry-Run Scaffold Preview
 text
 Copy code
