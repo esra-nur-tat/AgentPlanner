@@ -29,7 +29,7 @@ No files are written to disk unless execution is explicitly enabled.
 
 Create a CLI tool that orchestrates planning, review, and execution steps for software projects 
 ### Output (Plan)
-''' text
+``` text
 json
 Copy code
 {
@@ -61,8 +61,11 @@ Copy code
     "requirements.md"
   ],
   "status": "draft"
-}'''
+}
+
+```
 ## Dry-Run Scaffold Preview
+```
 text
 Copy code
 Scaffold preview (dry run):
@@ -70,9 +73,11 @@ Scaffold preview (dry run):
   [would create] src/core.py
   [would create] README.md
   [would create] requirements.md
+```
 By default, this is a preview only. Execution must be explicitly requested.
 
 ## Architecture (High Level)
+```
 csharp
 Copy code
 cli.py         - Orchestrates the workflow
@@ -81,10 +86,12 @@ validation.py - Enforces schema correctness
 reviewer.py   - Checks plan quality
 refiner.py    - Improves rejected plans
 scaffold.py   - Previews or executes file creation
+```
+
 Each step has a single responsibility, and side effects are isolated.
 
-##Design Principles
-Safety First
+## Design Principles
+### Safety First
 
 Dry-run by default
 
@@ -92,7 +99,7 @@ Explicit execution
 
 Rollback on failure
 
-Determinism
+### Determinism
 
 Same input produces the same output
 
@@ -100,7 +107,7 @@ No hidden randomness
 
 No automatic decision-making
 
-Separation of Concerns
+### Separation of Concerns
 
 Planning, validation, review, refinement, and execution are independent stages
 
